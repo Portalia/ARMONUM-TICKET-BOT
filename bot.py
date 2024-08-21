@@ -20,7 +20,7 @@ if configs.get("SERVER").data == "STB":
     ADMIN_ROLE_ID = 1263778828291936264
     TICKETS_CATEGORY_ID = 1109898906604675193
     activities = configs.get("ACTIVITY").data
-elif configs.fet("SERVER").data == "ARMONUM":
+elif configs.get("SERVER").data == "ARMONUM":
     DISCORD_TOKEN = configs.get("DISCORD_TOKEN").data
     GUILD_ID = 1263778828291936257
     TICKETS_CHANNEL_ID = 1275100516824776820
@@ -104,7 +104,7 @@ async def on_ready():
     print(f'Connecté en tant que {bot.user}')
     activity = discord.Game(name=activities)
     await bot.change_presence(status=discord.Status.online, activity=activity)
-    channel = bot.get_channel(1275451976028524679)
+    channel = bot.get_channel(1275100516824776820)
     if channel:
         print("Connecté au salon.")
         file = open('id.txt','r')

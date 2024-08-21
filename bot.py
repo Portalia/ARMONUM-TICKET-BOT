@@ -102,7 +102,6 @@ class CloseReasonModal(Modal):
 @bot.event
 async def on_ready():
     print(f'Connecté en tant que {bot.user}')
-    print(TICKETS_CHANNEL_ID)
     activity = discord.Game(name=activities)
     await bot.change_presence(status=discord.Status.online, activity=activity)
     channel = bot.get_channel(1275451976028524679)
